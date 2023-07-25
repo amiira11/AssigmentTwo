@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        
+  @import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,500;1,600;1,700;1,800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Foldit:wght@200;300;400;500;600;700;800;900&family=Jockey+One&family=Kablammo&display=swap');
+        
+        
+
+      
+
+
+  .container{
+            width: min(90%, 1200px);
+            margin-inline: auto;
+        }
+        .boxes{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 70px;
+            gap: 25px 25px;
+            color: white;
+        }
+        .box-1{
+    background-color: green;
+    padding: 30px;
+    font-size: 30px;
+    text-align: center;
+}   
+.box-2{
+    background-color: blue;
+    padding: 30px;
+    font-size: 30px;
+    text-align: center;
+}  
+.box-3{
+    background-color: red;
+    padding: 30px;
+    font-size: 30px;
+    text-align: center;
+}  
+.box-4{
+    background-color: skyblue;
+    padding: 30px;
+    font-size: 30px;
+    text-align: center;
+}  
+.box-5{
+    background-color: black;
+    padding: 30px;
+    font-size: 30px;
+    text-align: center;
+}  
+.box-6{
+    background-color: yellow;
+    padding: 30px;
+    font-size: 30px;
+    text-align: center;
+}  
+.box-7{
+    background-color: Cadetblue;
+    padding: 30px;
+    font-size: 30px;
+    text-align: center;
+}  
+.box-8{
+    background-color: Darkorchid;
+    padding: 30px;
+    font-size: 30px;
+    text-align: center;
+}  
+.box-9{
+    background-color: gray;
+    padding: 30px;
+    font-size: 30px;
+    text-align: center;
+}  
+.text{
+    height: 200px;
+    width: 60%;
+    margin-left: 299px;
+    border: 1px solid black;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 20%;
+    height: 20px;
+    margin: 30px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="boxes">
+            <div class="box-1">Green</div>
+            <div class="box-2">Blue</div>
+            <div class="box-3">Red</div>
+            <div class="box-4">Skyblue</div>
+            <div class="box-5">Black</div>
+            <div class="box-6">Yellow</div>
+            <div class="box-7">Cadetblue</div>
+            <div class="box-8">Darkorchid</div>
+            <div class="box-9">Gray</div>
+        </div>
+        <div class="text">amiira</div>
+        <input type="number" value="font" placeholder="fontSize">
+        <input type="number" value="border" placeholder="borderRadius">
+        <input type="fontweight" value="fontweight" placeholder="fontWeight">
+        <select name="font" id="font">
+            <option value="Cursive">Cursive</option>
+            <option value="Anybody">Anybody</option>
+            <option value="Kablammo">Kablammo</option>
+            <option value="Foldit">Foldit</option>
+            <option value="Jockey One">Jockey One</option>
+        </select>
+    </div>
+    <script>
+        
+let Text = document.querySelector(".text");
+const colors = {
+  green: document.querySelector(".box-1"),
+  blue: document.querySelector(".box-2"),
+  red: document.querySelector(".box-3"),
+  blueSky: document.querySelector(".box-4"),
+  black: document.querySelector(".box-5"),
+  yellow: document.querySelector(".box-6"),
+  cadetblue: document.querySelector(".box-7"),
+  darkorchid: document.querySelector(".box-8"),
+  grey: document.querySelector(".box-9"),
+};
+//colors 
+colors.green.addEventListener("click", ()=>{
+    Text.style.backgroundColor = "green";
+});
+colors.blue.addEventListener("click", ()=>{
+    Text.style.backgroundColor = "blue";
+});
+colors.red.addEventListener("click", ()=>{
+    Text.style.backgroundColor = "Red";
+});
+colors.blueSky.addEventListener("click", ()=>{
+    Text.style.backgroundColor = "skyblue";
+});
+colors.black.addEventListener("click", ()=>{
+    Text.style.backgroundColor = "black";
+});
+colors.yellow.addEventListener("click", ()=>{
+    Text.style.backgroundColor = "yellow";
+});
+colors.cadetblue.addEventListener("click", ()=>{
+    Text.style.backgroundColor = "cadetblue";
+});
+colors.darkorchid.addEventListener("click", ()=>{
+    Text.style.backgroundColor = "darkorchid";
+});
+colors.grey.addEventListener("click", ()=>{
+    Text.style.backgroundColor = "grey";
+});
+
+// font size
+const fontSize = document.querySelector('[value= "font"]');
+fontSize.addEventListener("keyup", (event)=>{
+    Text.style.fontSize = fontSize.value+ "px";
+});
+
+//Border Radius
+const border = document.querySelector('[value= "border"]');
+border.addEventListener("keyup", (event)=>{
+    Text.style.borderRadius =border.value + "px";
+});
+
+// font weight
+ const fontWeight = document.querySelector('[value= "fontweight"]');
+ fontWeight.addEventListener("keyup", (event)=>{
+    Text.style.fontWeight = fontWeight.value;
+ });
+
+// font family
+const fontFamily = document.querySelector("#font");
+fontFamily.addEventListener("change", (event)=>{
+    const fontChange = event.target.value;
+        Text.style.fontFamily = fontChange;
+});
+    </script>
+</body>
+</html>
